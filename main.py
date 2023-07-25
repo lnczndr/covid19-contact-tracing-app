@@ -77,9 +77,17 @@ respondent_housenum.place (width= 170, x=110, y=150)
 
 # BARANGAY
 respondent_brgy = tk.Label (root, text="Barangay: ", font= ("Cambria", 10))
-respondent_brgy.place (x=290, y=150)
+respondent_brgy.place (x=300, y=150)
 respondent_brgy = tk.Entry(root)
-respondent_brgy.place (width= 170, x=360, y=150)
+respondent_brgy.place (width= 170, x=370, y=150)
+
+# MUNICIPALITY
+respondent_municipality = tk.Label (root, text="Municipality: ", font=("Cambria", 10))
+respondent_municipality.place (x=560, y=150)
+respondent_municipality = tk.Entry(root)
+respondent_municipality.place (width= 170, x=645, y=150)
+
+
 
 
 root.mainloop()
