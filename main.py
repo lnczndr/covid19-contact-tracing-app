@@ -57,10 +57,23 @@ respondent_age = tk.Entry(root)
 respondent_age.place (width= 100, x=235, y=120)
 
 # CONTACT NUMBER
-
 respondent_contact = tk.Label (root, text="Contact Number: ", font= ("Cambria",10))
 respondent_contact.place (x=350, y=120)
 respondent_contact = tk.Entry(root)
 respondent_contact.place (width= 130, x=450, y=120)
+
+# EMAIL
+respondent_email = tk.Label (root, text="Email: ", font= ("Cambria", 10))
+respondent_email.place(x=600, y=120)
+respondent_email = tk.Entry(root)
+respondent_email.place (width= 165, x=650, y=120)
+
+# ADDRESS
+# BLDG/HOUSE NUMBER
+respondent_housenum = tk.Label (root, text="Bldg/House No: ", font= ("Cambria", 10))
+respondent_housenum.place (x=10, y=150)
+respondent_housenum = tk.Entry(root)
+respondent_housenum.place (width= 170, x=110, y=150)
+
 
 root.mainloop()
