@@ -15,7 +15,11 @@ root.geometry ("850x500")
 root.title ("COVID-19 CONTACT TRACING APP")
 
 # MAKING A LABEL
-respondent_info = tk.Label(root, text="COVID-19 CONTACT TRACING APP", font= ("Times New Roman", 18))
-respondent_info.pack(padx=20, pady=20)
+title_label = tk.Label(root, text="COVID-19 CONTACT TRACING APP", font= ("Times New Roman", 18))
+title_label.pack(padx=20)
+
+instruction_label = tk.Label(root, text = "NOTE: Please fill up the details needed for contact tracing", font= ("Cambria", 12))
+instruction_label.pack()
+
 
 root.mainloop()
