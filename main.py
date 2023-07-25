@@ -9,7 +9,7 @@ from tkinter import ttk
 
 # MAKING A WINDOW
 root = tk.Tk()
-root.geometry ("850x500")
+root.geometry ("870x500")
 
 # GIVING TITLE TO THE WINDOW
 root.title ("COVID-19 CONTACT TRACING APP")
@@ -34,11 +34,15 @@ respondent_surname.place (width= 175, x=70, y= 90)
 
 # FIRST NAME
 respondent_fn = tk.Label (root, text="First Name: ", font=('Cambria', 10))
-respondent_fn.place (x=275, y= 90)
+respondent_fn.place (x=270, y= 90)
 respondent_fn = tk.Entry (root)
-respondent_fn.place (width= 175, x=350, y= 90)
+respondent_fn.place (width= 175, x=340, y= 90)
 
-
+# MIDDLE NAME
+respondent_mn = tk.Label (root, text="Middle Name: ", font=('Cambria', 10))
+respondent_mn.place (x=540, y= 90)
+respondent_mn = tk.Entry (root)
+respondent_mn.place (width= 175, x=630, y= 90)
 
 
 root.mainloop()
