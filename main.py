@@ -10,6 +10,12 @@ from tkinter import ttk
 # MAKING A WINDOW
 root = tk.Tk()
 root.geometry ("850x500")
-root.mainloop()
 
-# 
+# GIVING TITLE TO THE WINDOW
+root.title ("COVID-19 CONTACT TRACING APP")
+
+# MAKING A LABEL
+respondent_info = tk.Label(root, text="COVID-19 CONTACT TRACING APP", font= ("Times New Roman", 18))
+respondent_info.pack(padx=20, pady=20)
+
+root.mainloop()
