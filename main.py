@@ -36,13 +36,18 @@ respondent_surname.place (width= 175, x=70, y= 90)
 respondent_fn = tk.Label (root, text="First Name: ", font=('Cambria', 10))
 respondent_fn.place (x=270, y= 90)
 respondent_fn = tk.Entry (root)
-respondent_fn.place (width= 175, x=340, y= 90)
+respondent_fn.place (width= 175, x=350, y= 90)
 
 # MIDDLE NAME
 respondent_mn = tk.Label (root, text="Middle Name: ", font=('Cambria', 10))
-respondent_mn.place (x=540, y= 90)
+respondent_mn.place (x=550, y= 90)
 respondent_mn = tk.Entry (root)
-respondent_mn.place (width= 175, x=630, y= 90)
+respondent_mn.place (width= 175, x=640, y= 90)
 
+# GENDER
+respondent_gender = tk.Label (root, text="Gender: ", font= ("Cambria",10))
+respondent_gender.place (x=10, y=120)
+respondent_gender = ttk.Combobox(root, values=("Male", "Female", "Others", "Prefer not to say"))
+respondent_gender.place (width= 175, x=70, y=120)
 
 root.mainloop()
