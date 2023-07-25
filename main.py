@@ -21,7 +21,15 @@ title_label.pack(padx=20)
 instruction_label = tk.Label(root, text = "NOTE: Please fill up the details needed for contact tracing", font= ("Cambria", 12, 'italic'))
 instruction_label.pack()
 
-# MAKING ENTRY TEXTBOX FOR RESPONDENT'S PERSONAL INFORMATION
+respondent_info = tk.Label(root,text="RESPONDENT'S PERSONAL INFORMATION:",font=('Cambria', 10, 'bold'))
+respondent_info.place (x=10, y=60)
 
+# MAKING ENTRY TEXTBOX FOR RESPONDENT'S PERSONAL INFORMATION
+# NAME:
+# SURNAME
+respondent_surname = tk.Label (root, text="Surname: ", font=('Cambria', 10))
+respondent_surname.place (x=10, y= 90)
+respondent_surname = tk.Entry (root)
+respondent_surname.place (width= 175, x=70, y= 90)
 
 root.mainloop()
