@@ -88,11 +88,17 @@ respondent_municipality = tk.Entry(root)
 respondent_municipality.place (width= 170, x=645, y=150)
 
 # POSTAL CODE
-
 respondent_postal = tk.Label (root, text="Postal Code: ", font=("Cambria", 10))
 respondent_postal.place (x=10, y=180)
 respondent_postal = tk.Entry(root)
 respondent_postal.place (width= 170, x=90, y=180)
+
+# PROVINCE
+respondent_province = tk.Label (root, text="Province: ", font= ("Cambria", 10))
+respondent_province.place (x=300, y=180)
+respondent_province = tk.Entry(root)
+respondent_province.place (width= 170, x=370, y=180)
+
 
 
 root.mainloop()
