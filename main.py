@@ -32,4 +32,13 @@ respondent_surname.place (x=10, y= 90)
 respondent_surname = tk.Entry (root)
 respondent_surname.place (width= 175, x=70, y= 90)
 
+# FIRST NAME
+respondent_fn = tk.Label (root, text="First Name: ", font=('Cambria', 10))
+respondent_fn.place (x=275, y= 90)
+respondent_fn = tk.Entry (root)
+respondent_fn.place (width= 175, x=350, y= 90)
+
+
+
+
 root.mainloop()
