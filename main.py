@@ -48,14 +48,19 @@ respondent_mn.place (width= 175, x=640, y= 90)
 respondent_gender = tk.Label (root, text="Gender: ", font= ("Cambria",10))
 respondent_gender.place (x=10, y=120)
 respondent_gender = ttk.Combobox(root, values=("Male", "Female", "Others", "Prefer not to say"))
-respondent_gender.place (width= 175, x=70, y=120)
+respondent_gender.place (width= 115, x=70, y=120)
 
 # AGE
 respondent_age = tk.Label (root, text="Age: ", font= ("Cambria",10))
-respondent_age.place (x=270, y=120)
+respondent_age.place (x=200, y=120)
 respondent_age = tk.Entry(root)
-respondent_age.place (width= 100, x=310, y=120)
+respondent_age.place (width= 100, x=235, y=120)
 
+# CONTACT NUMBER
 
+respondent_contact = tk.Label (root, text="Contact Number: ", font= ("Cambria",10))
+respondent_contact.place (x=350, y=120)
+respondent_contact = tk.Entry(root)
+respondent_contact.place (width= 130, x=450, y=120)
 
 root.mainloop()
