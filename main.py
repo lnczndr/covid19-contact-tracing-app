@@ -8,6 +8,8 @@ import tkinter as tk
 from tkinter import ttk
 
 # MAKING A WINDOW
-
 root = tk.Tk()
+root.geometry ("850x500")
 root.mainloop()
+
+# 
