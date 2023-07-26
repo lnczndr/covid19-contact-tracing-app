@@ -9,7 +9,7 @@ from tkinter import ttk
 
 # MAKING A WINDOW
 root = tk.Tk()
-root.geometry ("850x500")
+root.geometry ("850x700")
 
 # GIVING TITLE TO THE WINDOW
 root.title ("COVID-19 CONTACT TRACING APP")
@@ -125,8 +125,8 @@ vacc_info = tk.Label(root,text="VACCINATION INFORMATION:",font=('Cambria', 12, '
 vacc_info.place (x=10, y=285)
 
 # NOTE
-vacc_note = tk.Label(root,text="(Questions refer to the past 14 days)", font=("Cambria", 10, 'italic'))
-vacc_note.place(x=240, y=285)
+vacc_note = tk.Label(root,text="(Questions refer to the past 14 days)", font=("Cambria", 8, 'italic'))
+vacc_note.place(x=240, y=289)
 
 # VACCINATION STATUS
 vacc_stat = tk.Label (root, text="Status: ", font= ("Cambria",10))
@@ -201,5 +201,8 @@ symptom11.place (x=495, y=400)
 nosymptom = tk.Checkbutton(root, text="None of the Above", font=("Cambria",11), variable=symptoms)
 nosymptom.place (x=625, y=400)
 
+# DIVIDER
+divider5 = tk.Label (root,text="_" * 141, font=('Cambria',12))
+divider5.place (y=430)
 
 root.mainloop()
