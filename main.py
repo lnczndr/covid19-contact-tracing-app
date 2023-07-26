@@ -235,6 +235,14 @@ contact_mn.place (width= 175, x=640, y= 525)
 contact_number = tk.Label (root, text="Contact Number: ", font=('Cambria', 10))
 contact_number.place (x=10, y= 555)
 contact_number = tk.Entry (root)
-contact_number.place (width= 140, x=115, y= 555)
+contact_number.place (width= 175, x=115, y= 555)
+
+# EMAIL
+contact_email = tk.Label (root, text="Email: ", font=('Cambria', 10))
+contact_email.place (x=305, y= 555)
+contact_email = tk.Entry (root)
+contact_email.place (width= 175, x=350, y= 555)
+
+
 
 root.mainloop()
