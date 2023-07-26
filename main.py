@@ -116,8 +116,13 @@ divider2 = tk.Label (root,text="_" * 141, font=('Cambria',12))
 divider2.place (y=230)
 
 # COVID-19 INFORMATION
+# ADDING DIVIDER FOR DESIGN
+divider3 = tk.Label (root,text="_" * 141, font=('Cambria',12))
+divider3.place (y=280)
 
-
+# MAKING LABEL FOR PERSONAL INFORMATION CATEGORY
+respondent_info = tk.Label(root,text="VACCINATION INFORMATION:",font=('Cambria', 12, 'bold'))
+respondent_info.place (x=10, y=285)
 
 
 root.mainloop()
