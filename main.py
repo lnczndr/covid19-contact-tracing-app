@@ -220,16 +220,16 @@ contact_surname = tk.Entry (root)
 contact_surname.place (width= 175, x=80, y= 525)
 
 # NAME:FIRST NAME
-respondent_fn = tk.Label (root, text="First Name: ", font=('Cambria', 10))
-respondent_fn.place (x=270, y= 525)
-respondent_fn = tk.Entry (root)
-respondent_fn.place (width= 175, x=350, y= 525)
+contact_fn = tk.Label (root, text="First Name: ", font=('Cambria', 10))
+contact_fn.place (x=270, y= 525)
+contact_fn = tk.Entry (root)
+contact_fn.place (width= 175, x=350, y= 525)
 
 # NAME:MIDDLE NAME
-respondent_mn = tk.Label (root, text="Middle Name: ", font=('Cambria', 10))
-respondent_mn.place (x=550, y= 525)
-respondent_mn = tk.Entry (root)
-respondent_mn.place (width= 175, x=640, y= 525)
+contact_mn = tk.Label (root, text="Middle Name: ", font=('Cambria', 10))
+contact_mn.place (x=550, y= 525)
+contact_mn = tk.Entry (root)
+contact_mn.place (width= 175, x=640, y= 525)
  
 
 
