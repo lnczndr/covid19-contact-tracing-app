@@ -9,7 +9,7 @@ from tkinter import ttk
 
 # MAKING A WINDOW
 root = tk.Tk()
-root.geometry ("850x700")
+root.geometry ("850x650")
 
 # GIVING TITLE TO THE WINDOW
 root.title ("COVID-19 CONTACT TRACING APP")
@@ -243,6 +243,14 @@ contact_email.place (x=305, y= 555)
 contact_email = tk.Entry (root)
 contact_email.place (width= 175, x=350, y= 555)
 
+# RELATIONSHIP
+contact_rela = tk.Label (root, text="Relationship: ", font=('Cambria', 10))
+contact_rela.place (x=550, y= 555)
+contact_rela = tk.Entry (root)
+contact_rela.place (width= 175, x=640, y= 555)
 
+# ADDING DIVIDER FOR DESIGN
+divider7 = tk.Label (root,text="_" * 141, font=('Cambria',12))
+divider7.place (y=580)
 
 root.mainloop()
