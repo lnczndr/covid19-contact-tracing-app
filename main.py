@@ -128,6 +128,13 @@ respondent_info.place (x=10, y=285)
 vacc_stat = tk.Label (root, text="Status: ", font= ("Cambria",10))
 vacc_stat.place (x=10, y=315)
 vacc_stat = ttk.Combobox(root, values=("Not Yet", "First Dose", "Second Dose", "First Booster Shot", "Second Booster Shot"))
-vacc_stat.place (width= 170, x=60, y=315)
+vacc_stat.place (width= 135, x=55, y=315)
+
+# CONTACT WITH PROBABLE CASES
+contact = tk.Label (root, text="Have you had contact with a probable case in the past 14 days?: ", font= ("Cambria",10))
+contact.place (x=195, y=315)
+contact = ttk.Combobox(root, values=("Yes", "No"))
+contact.place (width= 50, x=550, y=315)
+
 
 root.mainloop()
