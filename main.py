@@ -120,9 +120,14 @@ divider2.place (y=230)
 divider3 = tk.Label (root,text="_" * 141, font=('Cambria',12))
 divider3.place (y=280)
 
-# MAKING LABEL FOR PERSONAL INFORMATION CATEGORY
+# MAKING LABEL FOR VACCINATION INFORMATION CATEGORY
 respondent_info = tk.Label(root,text="VACCINATION INFORMATION:",font=('Cambria', 12, 'bold'))
 respondent_info.place (x=10, y=285)
 
+# VACCINATION STATUS
+vacc_stat = tk.Label (root, text="Status: ", font= ("Cambria",10))
+vacc_stat.place (x=10, y=315)
+vacc_stat = ttk.Combobox(root, values=("Not Yet", "First Dose", "Second Dose", "First Booster Shot", "Second Booster Shot"))
+vacc_stat.place (width= 170, x=60, y=315)
 
 root.mainloop()
