@@ -121,8 +121,12 @@ divider3 = tk.Label (root,text="_" * 141, font=('Cambria',12))
 divider3.place (y=280)
 
 # MAKING LABEL FOR VACCINATION INFORMATION CATEGORY
-respondent_info = tk.Label(root,text="VACCINATION INFORMATION:",font=('Cambria', 12, 'bold'))
-respondent_info.place (x=10, y=285)
+vacc_info = tk.Label(root,text="VACCINATION INFORMATION:",font=('Cambria', 12, 'bold'))
+vacc_info.place (x=10, y=285)
+
+# NOTE
+vacc_note = tk.Label(root,text="(Questions refer to the past 14 days)", font=("Cambria", 10, 'italic'))
+vacc_note.place(x=240, y=285)
 
 # VACCINATION STATUS
 vacc_stat = tk.Label (root, text="Status: ", font= ("Cambria",10))
@@ -131,10 +135,16 @@ vacc_stat = ttk.Combobox(root, values=("Not Yet", "First Dose", "Second Dose", "
 vacc_stat.place (width= 135, x=55, y=315)
 
 # CONTACT WITH PROBABLE CASES
-contact = tk.Label (root, text="Have you had contact with a probable case in the past 14 days?: ", font= ("Cambria",10))
+contact = tk.Label (root, text="Have you had contact with a probable case?: ", font= ("Cambria",10))
 contact.place (x=195, y=315)
 contact = ttk.Combobox(root, values=("Yes", "No"))
-contact.place (width= 50, x=550, y=315)
+contact.place (width= 50, x=445, y=315)
+
+# RECENT COVID-19 TEST RESULT
+test_result = tk.Label (root, text="Have you been tested for COVID-19?: ", font= ("Cambria",10))
+test_result.place (x=500, y=315)
+test_result = ttk.Combobox(root, values=("Yes - POSITIVE", "Yes - NEGATIVE","Yes - PENDING", "No"))
+test_result.place (width= 100, x=710, y=315)
 
 
 root.mainloop()
