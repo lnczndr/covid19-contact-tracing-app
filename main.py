@@ -146,5 +146,60 @@ test_result.place (x=500, y=315)
 test_result = ttk.Combobox(root, values=("Yes - POSITIVE", "Yes - NEGATIVE","Yes - PENDING", "No"))
 test_result.place (width= 100, x=710, y=315)
 
+# SYMPTOMS
+divider4 = tk.Label (root,text="_" * 141, font=('Cambria',12))
+divider4.place (y=340)
+symptom_label = ttk.Label (root, text="Symptoms: ", font=("Cambria",12))
+symptom_label.place (x=10, y=345)
+symptoms = tk.IntVar()
+
+# SYMPTOM 1: FEVER
+symptom1 = tk.Checkbutton(root, text="Fever", font=("Cambria",11), variable=symptoms)
+symptom1.place (x=10, y=370)
+
+# SYMPTOM 2: COUGH
+symptom2 = tk.Checkbutton(root, text="Cough", font=("Cambria",11), variable=symptoms)
+symptom2.place (x=100, y=370)
+
+# SYMPTOM 3: COLD
+symptom3 = tk.Checkbutton(root, text="Colds", font=("Cambria",11), variable=symptoms)
+symptom3.place (x=190, y=370)
+
+# SYMPTOM 4: MUSCLE/BODY PAIN
+symptom4 = tk.Checkbutton(root, text="Muscle/Body Pains", font=("Cambria",11), variable=symptoms)
+symptom4.place (x=280, y=370)
+
+# SYMPTOM 5: SORE THROAT
+symptom5 = tk.Checkbutton(root, text="Sore Throat", font=("Cambria",11), variable=symptoms)
+symptom5.place (x=450, y=370)
+
+# SYMPTOM 6: DIARRHEA
+symptom6 = tk.Checkbutton(root, text="Diarrhea", font=("Cambria",11), variable=symptoms)
+symptom6.place (x=580, y=370)
+
+# SYMPTOM 7: HEADACHE
+symptom7 = tk.Checkbutton(root, text="Headache", font=("Cambria",11), variable=symptoms)
+symptom7.place (x=680, y=370)
+
+# SYMPTOM 8: SHORTNESS OF BREATH
+symptom8 = tk.Checkbutton(root, text="Shortness of Breath", font=("Cambria",11), variable=symptoms)
+symptom8.place (x=10, y=400)
+
+# SYMPTOM 9: DIFFICULTY OF BREATHING
+symptom9 = tk.Checkbutton(root, text="Difficulty of Breathing", font=("Cambria",11), variable=symptoms)
+symptom9.place (x=175, y=400)
+
+# SYMPTOM 10: LOSS OF TASTE
+symptom10 = tk.Checkbutton(root, text="Loss of Taste", font=("Cambria",11), variable=symptoms)
+symptom10.place (x=360, y=400)
+
+# SYMPTOM 11: LOSS OF SMELL
+symptom11 = tk.Checkbutton(root, text="Loss of Smell", font=("Cambria",11), variable=symptoms)
+symptom11.place (x=495, y=400)
+
+# NO SYMPTOMS
+nosymptom = tk.Checkbutton(root, text="None of the Above", font=("Cambria",11), variable=symptoms)
+nosymptom.place (x=625, y=400)
+
 
 root.mainloop()
