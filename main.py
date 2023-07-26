@@ -14,35 +14,36 @@ root.geometry ("850x500")
 # GIVING TITLE TO THE WINDOW
 root.title ("COVID-19 CONTACT TRACING APP")
 
-# MAKING LABEL
+# MAKING TITLE LABEL
 title_label = tk.Label(root, text="COVID-19 CONTACT TRACING APP", font= ("Times New Roman", 18, 'bold'))
 title_label.pack(padx=20)
 
+# MAKING INSTRUCTION LABEL
 instruction_label = tk.Label(root, text = "NOTE: Please fill up the details needed for contact tracing", font= ("Cambria", 12, 'italic'))
 instruction_label.pack()
 
-# MAKING BACKGROUND
-frame = tk.Frame(root, width=850, height=170, bg="lightblue")
-frame.place(y=70)
+# ADDING DIVIDER FOR DESIGN
+divider1 = tk.Label (root,text="_" * 141, font=('Cambria',12))
+divider1.place (y=75)
 
+# MAKING LABEL FOR PERSONAL INFORMATION CATEGORY
 respondent_info = tk.Label(root,text="RESPONDENT'S PERSONAL INFORMATION:",font=('Cambria', 12, 'bold'))
 respondent_info.place (x=10, y=80)
 
 # MAKING ENTRY TEXTBOX FOR RESPONDENT'S PERSONAL INFORMATION
-# NAME:
-# SURNAME
+# NAME:SURNAME
 respondent_surname = tk.Label (root, text="Surname: ", font=('Cambria', 10))
 respondent_surname.place (x=10, y= 110)
 respondent_surname = tk.Entry (root)
 respondent_surname.place (width= 175, x=80, y= 110)
 
-# FIRST NAME
+# NAME:FIRST NAME
 respondent_fn = tk.Label (root, text="First Name: ", font=('Cambria', 10))
 respondent_fn.place (x=270, y= 110)
 respondent_fn = tk.Entry (root)
 respondent_fn.place (width= 175, x=350, y= 110)
 
-# MIDDLE NAME
+# NAME:MIDDLE NAME
 respondent_mn = tk.Label (root, text="Middle Name: ", font=('Cambria', 10))
 respondent_mn.place (x=550, y= 110)
 respondent_mn = tk.Entry (root)
@@ -111,8 +112,8 @@ respondent_region.place (width= 170, x=645, y=200)
 
 
 # DIVIDER
-divider = tk.Label (root,text="_" * 141, font=('Cambria',12))
-divider.place (y=250)
+divider2 = tk.Label (root,text="_" * 141, font=('Cambria',12))
+divider2.place (y=230)
 
 # COVID-19 INFORMATION
 
