@@ -39,9 +39,11 @@ This program is able to record and search entries that was submitted before.
 
 **PHOTO**
 - CONTACT TRACING APP:
+  
   ![image](https://github.com/lnczndr/covid19-contact-tracing-app/assets/129668431/cc33dc18-eee7-412c-8f2a-86b4aff6eaca)
 
 - RESULT FROM SEARCH:
+  
 ![image](https://github.com/lnczndr/covid19-contact-tracing-app/assets/129668431/106d1e62-4254-4daf-aa58-43bf6e2355a1)
 
 
