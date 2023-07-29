@@ -9,6 +9,36 @@ from tkinter import ttk,messagebox
 import csv
 # SUBMIT FUNCTION
 # DEFINING SUBMIT FUNCTIONS
+def search_function():
+    matchdata = []
+    search_query = search_button.get().lower()
+
+    with open("SubmittedEntries.csv", "r") as file:
+        reader = csv.reader(file)
+        header = next(reader) 
+        for row in reader:
+            match = False
+            for field in row:
+                if search_query == field.lower():
+                    match = True
+                    break
+            if match:
+                matchdata.append(row)
+
+    # show result
+        if matchdata:
+            results = "\n".join(
+                [
+                    f"\tPersonal Information: \n Name: {entry[0]} {entry[1]} {entry[2]}\t Gender: {entry[3]} \n Age: {entry[4]} \t E-mail: {entry[5]} \n Occupation: {entry[6]}\t Bldng/House Number: {entry[7]}\n Barangay: {entry[8]} \n Municipality: {entry[9]} \n  Postal: {entry[10]} \t Province: {entry[11]} \n Region : {entry[12]} \t Vaccination Status: {entry[13]} \n Probable Contact: {entry[14]} \n Covid Test Result: {entry[15]} \n Fever : {entry[16]}  \t Cough: {entry[17]}  \n Colds: {entry[18]}  \t Muscle/Body Pain: {entry[19]}  \n Sore Throat?: {entry[20]}  \t Headache: {entry[21]} \t Diarrhea: {entry[22]}  \t Shortness of Breath: {entry[23]}  \t Difficulty Breathing: {entry[24]} \n Loss of Taste: {entry[25]} \t Loss of Smell: {entry[26]} \n None: {entry[27]} \n  Contact Surname: {entry[28]} \n Contact First Name: {entry[29]} \n Contact Middle Name: {entry[30]} \n Contact Number: {entry[31]} \n Contact Email: {entry[32]} \n Contact Relation: {entry[33]}"
+
+                    for entry in matchdata
+                ]
+            )
+    # message for found or no result
+            messagebox.showinfo("Result Found: ", f"There are {len(matchdata)} data that matched your queries. Here they are!! :\n\n{results}")
+        else:
+            messagebox.showinfo("No Result: ", "No Data Entries Found")
+            
 def submit():
     # PERSONAL INFORMATION
     getsurname=respondent_surname.get()
@@ -50,7 +80,7 @@ def submit():
     getcontact_rela=contact_rela.get()
 
     # CSV LABEL
-    csvlabel=["Surname", "First Name", "Middle Name", "Gender", "Age", "E-mail", "Bldg/House No.", "Barangay", "Municipality", "Postal", "Province", "Region", "Vaccination Status", "Probable Contact", "Covid Test Result", "Fever", "Cough", "Colds", "Muscle/Body Pains", "Sore Throat", "Diarrhea", "Headache", "Shortness of Breath", "Difficulty of Breathing", "Loss of Taste", "Loss of Taste", "Loss of Smell", "None", "Contact Surname", "Contact First Name", "Contact Middle Name", "Contact Number", "Contact Email", "Contact Re;atopn"]
+    csvlabel=["Surname", "First Name", "Middle Name", "Gender", "Age", "E-mail", "Bldg/House No.", "Barangay", "Municipality", "Postal", "Province", "Region", "Vaccination Status", "Probable Contact", "Covid Test Result", "Fever", "Cough", "Colds", "Muscle/Body Pains", "Sore Throat", "Diarrhea", "Headache", "Shortness of Breath", "Difficulty of Breathing", "Loss of Taste", "Loss of Smell", "None", "Contact Surname", "Contact First Name", "Contact Middle Name", "Contact Number", "Contact Email", "Contact Relation"]
     csvinput=[getsurname, getfirstname, getmiddlename ,getgender, getage, getr_email, gethousenum, getbarangay, getmunicipality, getpostal, getprovince, getregion, getstatus, getcontact, gettest_result, getsymptom1, getsymptom2, getsymptom3, getsymptom4, getsymptom5, getsymptom6, getsymptom7, getsymptom8, getsymptom9, getsymptom10, getsymptom11, getnosymptom, getcontact,getcontact_surname, getcontact_fn,getcontact_mn, getcontact_number, getcontact_email, getcontact_rela]
 
     check = False
@@ -72,7 +102,7 @@ def submit():
 
 # MAKING A WINDOW
 root = tk.Tk()
-root.geometry ("850x700")
+root.geometry ("850x725")
 # GIVING TITLE TO THE WINDOW
 root.title ("COVID-19 CONTACT TRACING APP")
 
@@ -327,7 +357,11 @@ divider7 = tk.Label (root,text="_" * 141, font=('Cambria',12))
 divider7.place (y=580)
 
 # MAKING SEARCH BUTTON
-search_button = tk.Button (root, text="Search Entry", font=("Cambria",12)).pack(side=tk.BOTTOM, pady=10)
+search_button = tk.Button (root, command=search_function, text="Search Entry", font=("Cambria",12)).pack(side=tk.BOTTOM, pady=10)
+
+# ADDING FUNCTION TO SEARCH BUTTON
+search_button= tk.Entry(root)
+search_button.place (width= 103, x=374, y=610)
 
 # MAKING SUBMIT BUTTON AND LABEL
 submit_button = tk.Button (root, command=submit, text="Submit Entry", font=("Cambria",12)).pack(side=tk.BOTTOM)
