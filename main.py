@@ -72,8 +72,7 @@ def submit():
 
 # MAKING A WINDOW
 root = tk.Tk()
-root.geometry ("850x650")
-
+root.geometry ("850x700")
 # GIVING TITLE TO THE WINDOW
 root.title ("COVID-19 CONTACT TRACING APP")
 
@@ -327,7 +326,10 @@ contact_rela.place (width= 175, x=640, y= 555)
 divider7 = tk.Label (root,text="_" * 141, font=('Cambria',12))
 divider7.place (y=580)
 
-# MAKING SUBMIT BUTTON
-submit_button = tk.Button (root, command=submit, text="Submit Entry", font=("Cambria",12)).pack(side=tk.BOTTOM, pady=10)
+# MAKING SEARCH BUTTON
+search_button = tk.Button (root, text="Search Entry", font=("Cambria",12)).pack(side=tk.BOTTOM, pady=10)
+
+# MAKING SUBMIT BUTTON AND LABEL
+submit_button = tk.Button (root, command=submit, text="Submit Entry", font=("Cambria",12)).pack(side=tk.BOTTOM)
 
 root.mainloop()
