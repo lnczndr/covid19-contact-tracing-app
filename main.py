@@ -6,7 +6,7 @@
 # IMPORTING TKINTER
 import tkinter as tk
 from tkinter import ttk
-
+import csv
 # SUBMIT FUNCTION
 # DEFINING SUBMIT FUNCTIONS
 def submit():
@@ -217,62 +217,62 @@ symptom_label.place (x=10, y=345)
 
 # SYMPTOM 1: FEVER
 symptoms1 = tk.IntVar()
-symptom1 = tk.Checkbutton(root, text="Fever", font=("Cambria",11), variable=symptoms1, onvalue='/', offvalue='x')
+symptom1 = tk.Checkbutton(root, text="Fever", font=("Cambria",11), variable=symptoms1, onvalue=1, offvalue=0)
 symptom1.place (x=10, y=370)
 
 # SYMPTOM 2: COUGH
 symptoms2 = tk.IntVar()
-symptom2 = tk.Checkbutton(root, text="Cough", font=("Cambria",11), variable=symptoms2, onvalue='/', offvalue='x')
+symptom2 = tk.Checkbutton(root, text="Cough", font=("Cambria",11), variable=symptoms2, onvalue=1, offvalue=0)
 symptom2.place (x=100, y=370)
 
 # SYMPTOM 3: COLD
 symptoms3 = tk.IntVar()
-symptom3 = tk.Checkbutton(root, text="Colds", font=("Cambria",11), variable=symptoms3, onvalue='/', offvalue='x')
+symptom3 = tk.Checkbutton(root, text="Colds", font=("Cambria",11), variable=symptoms3, onvalue=1, offvalue=0)
 symptom3.place (x=190, y=370)
 
 # SYMPTOM 4: MUSCLE/BODY PAIN
 symptoms4 = tk.IntVar()
-symptom4 = tk.Checkbutton(root, text="Muscle/Body Pains", font=("Cambria",11), variable=symptoms4, onvalue='/', offvalue='x')
+symptom4 = tk.Checkbutton(root, text="Muscle/Body Pains", font=("Cambria",11), variable=symptoms4, onvalue=1, offvalue=0)
 symptom4.place (x=280, y=370)
 
 # SYMPTOM 5: SORE THROAT
 symptoms5 = tk.IntVar()
-symptom5 = tk.Checkbutton(root, text="Sore Throat", font=("Cambria",11), variable=symptoms5, onvalue='/', offvalue='x')
+symptom5 = tk.Checkbutton(root, text="Sore Throat", font=("Cambria",11), variable=symptoms5, onvalue=1, offvalue=0)
 symptom5.place (x=450, y=370)
 
 # SYMPTOM 6: DIARRHEA
 symptoms6 = tk.IntVar()
-symptom6 = tk.Checkbutton(root, text="Diarrhea", font=("Cambria",11), variable=symptoms6, onvalue='/', offvalue='x')
+symptom6 = tk.Checkbutton(root, text="Diarrhea", font=("Cambria",11), variable=symptoms6, onvalue=1, offvalue=0)
 symptom6.place (x=580, y=370)
 
 # SYMPTOM 7: HEADACHE
 symptoms7 = tk.IntVar()
-symptom7 = tk.Checkbutton(root, text="Headache", font=("Cambria",11), variable=symptoms7, onvalue='/', offvalue='x')
+symptom7 = tk.Checkbutton(root, text="Headache", font=("Cambria",11), variable=symptoms7, onvalue=1, offvalue=0)
 symptom7.place (x=680, y=370)
 
 # SYMPTOM 8: SHORTNESS OF BREATH
 symptoms8 = tk.IntVar()
-symptom8 = tk.Checkbutton(root, text="Shortness of Breath", font=("Cambria",11), variable=symptoms8, onvalue='/', offvalue='x')
+symptom8 = tk.Checkbutton(root, text="Shortness of Breath", font=("Cambria",11), variable=symptoms8, onvalue=1, offvalue=0)
 symptom8.place (x=10, y=400)
 
 # SYMPTOM 9: DIFFICULTY OF BREATHING
 symptoms9 = tk.IntVar()
-symptom9 = tk.Checkbutton(root, text="Difficulty of Breathing", font=("Cambria",11), variable=symptoms9, onvalue='/', offvalue='x')
+symptom9 = tk.Checkbutton(root, text="Difficulty of Breathing", font=("Cambria",11), variable=symptoms9, onvalue=1, offvalue=0)
 symptom9.place (x=175, y=400)
 
 # SYMPTOM 10: LOSS OF TASTE
 symptoms10 = tk.IntVar()
-symptom10 = tk.Checkbutton(root, text="Loss of Taste", font=("Cambria",11), variable=symptoms10, onvalue='/', offvalue='x')
+symptom10 = tk.Checkbutton(root, text="Loss of Taste", font=("Cambria",11), variable=symptoms10, onvalue=1, offvalue=0)
 symptom10.place (x=360, y=400)
 
 # SYMPTOM 11: LOSS OF SMELL
 symptoms11 = tk.IntVar()
-symptom11 = tk.Checkbutton(root, text="Loss of Smell", font=("Cambria",11), variable=symptoms11, onvalue='/', offvalue='x')
+symptom11 = tk.Checkbutton(root, text="Loss of Smell", font=("Cambria",11), variable=symptoms11, onvalue=1, offvalue=0)
 symptom11.place (x=495, y=400)
 
 # NO SYMPTOMS
 nosymptoms = tk.IntVar()
-nosymptom = tk.Checkbutton(root, text="None of the Above", font=("Cambria",11), variable=nosymptoms, onvalue='/', offvalue='x')
+nosymptom = tk.Checkbutton(root, text="None of the Above", font=("Cambria",11), variable=nosymptoms, onvalue=1, offvalue=0)
 nosymptom.place (x=625, y=400)
 
 # DIVIDER

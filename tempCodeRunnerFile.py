@@ -1,1 +1,2 @@
-submit_button = tk.Button (root, command=submit, text="Submit Entry", font=("Cambria",12)).pack(side=tk.BOTTOM, pady=10)
+nvalue=1, offvalue=0)
+nosymptom.place (x=625, y=400)
