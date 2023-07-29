@@ -308,6 +308,8 @@ def submit(self):
     getcontact_email=contact_email.get()
     getcontact_rela=contact_rela.get()
 
-
+    # CSV LABEL
+    csvlabel=["Surname", "First Name", "Middle Name", "Gender", "Age", "E-mail", "Bldg/House No.", "Barangay", "Municipality", "Postal", "Province", "Region", "Vaccination Status", "Probable Contact", "Covid Test Result", "Fever", "Cough", "Colds", "Muscle/Body Pains", "Sore Throat", "Diarrhea", "Headache", "Shortness of Breath", "Difficulty of Breathing", "Loss of Taste", "Loss of Taste", "Loss of Smell", "None", "Contact Surname", "Contact First Name", "Contact Middle Name", "Contact Number", "Contact Email", "Contact Re;atopn"]
+    csvinput=[getsurname, getfirstname, getmiddlename ,getgender, getage, getr_email, gethousenum, getbarangay, getmunicipality, getpostal, getprovince, getregion, getstatus, getcontact, gettest_result, getsymptom1, getsymptom2, getsymptom3, getsymptom4, getsymptom5, getsymptom6, getsymptom7, getsymptom8, getsymptom9, getsymptom10, getsymptom11, getnosymptom, getcontact,getcontact_surname, getcontact_fn,getcontact_mn, getcontact_number, getcontact_email, getcontact_rela]
 
 root.mainloop()
