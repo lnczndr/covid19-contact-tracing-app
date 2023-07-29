@@ -98,7 +98,6 @@ def submit():
             write.writerow(csvlabel)
         write.writerow(csvinput)
     messagebox.showinfo("Entries Submitted", "Your entries has been submitted successfully")
-    root.destroy()
 
 # MAKING A WINDOW
 root = tk.Tk()
