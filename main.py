@@ -151,54 +151,65 @@ divider4 = tk.Label (root,text="_" * 141, font=('Cambria',12))
 divider4.place (y=340)
 symptom_label = ttk.Label (root, text="Symptoms: ", font=("Cambria",12))
 symptom_label.place (x=10, y=345)
-symptoms = tk.IntVar()
 
 # SYMPTOM 1: FEVER
-symptom1 = tk.Checkbutton(root, text="Fever", font=("Cambria",11), variable=symptoms)
+symptoms1 = tk.IntVar()
+symptom1 = tk.Checkbutton(root, text="Fever", font=("Cambria",11), variable=symptoms1, onvalue='/', offvalue='x')
 symptom1.place (x=10, y=370)
 
 # SYMPTOM 2: COUGH
-symptom2 = tk.Checkbutton(root, text="Cough", font=("Cambria",11), variable=symptoms)
+symptoms2 = tk.IntVar()
+symptom2 = tk.Checkbutton(root, text="Cough", font=("Cambria",11), variable=symptoms2, onvalue='/', offvalue='x')
 symptom2.place (x=100, y=370)
 
 # SYMPTOM 3: COLD
-symptom3 = tk.Checkbutton(root, text="Colds", font=("Cambria",11), variable=symptoms)
+symptoms3 = tk.IntVar()
+symptom3 = tk.Checkbutton(root, text="Colds", font=("Cambria",11), variable=symptoms3, onvalue='/', offvalue='x')
 symptom3.place (x=190, y=370)
 
 # SYMPTOM 4: MUSCLE/BODY PAIN
-symptom4 = tk.Checkbutton(root, text="Muscle/Body Pains", font=("Cambria",11), variable=symptoms)
+symptoms4 = tk.IntVar()
+symptom4 = tk.Checkbutton(root, text="Muscle/Body Pains", font=("Cambria",11), variable=symptoms4, onvalue='/', offvalue='x')
 symptom4.place (x=280, y=370)
 
 # SYMPTOM 5: SORE THROAT
-symptom5 = tk.Checkbutton(root, text="Sore Throat", font=("Cambria",11), variable=symptoms)
+symptoms5 = tk.IntVar()
+symptom5 = tk.Checkbutton(root, text="Sore Throat", font=("Cambria",11), variable=symptoms5, onvalue='/', offvalue='x')
 symptom5.place (x=450, y=370)
 
 # SYMPTOM 6: DIARRHEA
-symptom6 = tk.Checkbutton(root, text="Diarrhea", font=("Cambria",11), variable=symptoms)
+symptoms6 = tk.IntVar()
+symptom6 = tk.Checkbutton(root, text="Diarrhea", font=("Cambria",11), variable=symptoms6, onvalue='/', offvalue='x')
 symptom6.place (x=580, y=370)
 
 # SYMPTOM 7: HEADACHE
-symptom7 = tk.Checkbutton(root, text="Headache", font=("Cambria",11), variable=symptoms)
+symptoms7 = tk.IntVar()
+symptom7 = tk.Checkbutton(root, text="Headache", font=("Cambria",11), variable=symptoms7, onvalue='/', offvalue='x')
 symptom7.place (x=680, y=370)
 
 # SYMPTOM 8: SHORTNESS OF BREATH
-symptom8 = tk.Checkbutton(root, text="Shortness of Breath", font=("Cambria",11), variable=symptoms)
+symptoms8 = tk.IntVar()
+symptom8 = tk.Checkbutton(root, text="Shortness of Breath", font=("Cambria",11), variable=symptoms8, onvalue='/', offvalue='x')
 symptom8.place (x=10, y=400)
 
 # SYMPTOM 9: DIFFICULTY OF BREATHING
-symptom9 = tk.Checkbutton(root, text="Difficulty of Breathing", font=("Cambria",11), variable=symptoms)
+symptoms9 = tk.IntVar()
+symptom9 = tk.Checkbutton(root, text="Difficulty of Breathing", font=("Cambria",11), variable=symptoms9, onvalue='/', offvalue='x')
 symptom9.place (x=175, y=400)
 
 # SYMPTOM 10: LOSS OF TASTE
-symptom10 = tk.Checkbutton(root, text="Loss of Taste", font=("Cambria",11), variable=symptoms)
+symptoms10 = tk.IntVar()
+symptom10 = tk.Checkbutton(root, text="Loss of Taste", font=("Cambria",11), variable=symptoms10, onvalue='/', offvalue='x')
 symptom10.place (x=360, y=400)
 
 # SYMPTOM 11: LOSS OF SMELL
-symptom11 = tk.Checkbutton(root, text="Loss of Smell", font=("Cambria",11), variable=symptoms)
+symptoms11 = tk.IntVar()
+symptom11 = tk.Checkbutton(root, text="Loss of Smell", font=("Cambria",11), variable=symptoms11, onvalue='/', offvalue='x')
 symptom11.place (x=495, y=400)
 
 # NO SYMPTOMS
-nosymptom = tk.Checkbutton(root, text="None of the Above", font=("Cambria",11), variable=symptoms)
+nosymptoms = tk.IntVar()
+nosymptom = tk.Checkbutton(root, text="None of the Above", font=("Cambria",11), variable=nosymptoms, onvalue='/', offvalue='x')
 nosymptom.place (x=625, y=400)
 
 # DIVIDER
@@ -271,6 +282,6 @@ def submit(self):
     getstatus=vacc_stat.get()
     getcontact=contact.get()
     gettest_result=test_result.get()
-    getsymptom1=getsymptom1.get()
+    getsymptom1=symptom1.get()
     
 root.mainloop()
