@@ -253,4 +253,7 @@ contact_rela.place (width= 175, x=640, y= 555)
 divider7 = tk.Label (root,text="_" * 141, font=('Cambria',12))
 divider7.place (y=580)
 
+# MAKING SUBMIT BUTTON
+submit_button = tk.Button (root, text="Submit Entry", font=("Cambria",12)).pack(side=tk.BOTTOM, pady=10)
+
 root.mainloop()
