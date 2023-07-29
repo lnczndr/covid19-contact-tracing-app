@@ -7,6 +7,69 @@
 import tkinter as tk
 from tkinter import ttk
 
+# SUBMIT FUNCTION
+# DEFINING SUBMIT FUNCTIONS
+def submit():
+    # PERSONAL INFORMATION
+    getsurname=respondent_surname.get()
+    getfirstname=respondent_fn.get()
+    getmiddlename=respondent_mn.get()
+    getgender=respondent_gender.get()
+    getage=respondent_age.get()
+    getr_email=respondent_email.get()
+    gethousenum=respondent_housenum.get()
+    getbarangay=respondent_brgy.get()
+    getmunicipality=respondent_municipality.get()
+    getpostal=respondent_postal.get()
+    getprovince=respondent_province.get()
+    getregion=respondent_region.get()
+
+    # VACCINATION INFORMATION
+    getstatus=vacc_stat.get()
+    getcontact=contact.get()
+    gettest_result=test_result.get()
+    getsymptom1=symptoms1.get()
+    getsymptom2=symptoms2.get()
+    getsymptom3=symptoms3.get()
+    getsymptom4=symptoms4.get()
+    getsymptom5=symptoms5.get()
+    getsymptom6=symptoms6.get()
+    getsymptom7=symptoms7.get()
+    getsymptom8=symptoms8.get()
+    getsymptom9=symptoms9.get()
+    getsymptom10=symptoms10.get()
+    getsymptom11=symptoms11.get()
+    getnosymptom=nosymptoms.get()
+
+    # CONTACT INFORMATION
+    getcontact_surname=contact_surname.get()
+    getcontact_fn=contact_fn.get()
+    getcontact_mn=contact_mn.get()
+    getcontact_number=contact_number.get()
+    getcontact_email=contact_email.get()
+    getcontact_rela=contact_rela.get()
+
+    # CSV LABEL
+    csvlabel=["Surname", "First Name", "Middle Name", "Gender", "Age", "E-mail", "Bldg/House No.", "Barangay", "Municipality", "Postal", "Province", "Region", "Vaccination Status", "Probable Contact", "Covid Test Result", "Fever", "Cough", "Colds", "Muscle/Body Pains", "Sore Throat", "Diarrhea", "Headache", "Shortness of Breath", "Difficulty of Breathing", "Loss of Taste", "Loss of Taste", "Loss of Smell", "None", "Contact Surname", "Contact First Name", "Contact Middle Name", "Contact Number", "Contact Email", "Contact Re;atopn"]
+    csvinput=[getsurname, getfirstname, getmiddlename ,getgender, getage, getr_email, gethousenum, getbarangay, getmunicipality, getpostal, getprovince, getregion, getstatus, getcontact, gettest_result, getsymptom1, getsymptom2, getsymptom3, getsymptom4, getsymptom5, getsymptom6, getsymptom7, getsymptom8, getsymptom9, getsymptom10, getsymptom11, getnosymptom, getcontact,getcontact_surname, getcontact_fn,getcontact_mn, getcontact_number, getcontact_email, getcontact_rela]
+
+    check = False
+    try:
+        with open("SubmittedEntries.csv", "r") as csvfile:
+            read = csv.reader(csvfile)
+            if any(read):
+                check = True
+    except FileNotFoundError:
+        pass
+    # write data in csv file
+    with open("SubmittedEntries.csv", "a", newline="") as csvfile:
+        write = csv.writer(csvfile)
+        if not check:
+            write.writerow(csvlabel)
+        write.writerow(csvinput)
+    messagebox.showinfo("Entries Submitted", "Your entries has been submitted successfully")
+    root.destroy()
+
 # MAKING A WINDOW
 root = tk.Tk()
 root.geometry ("850x650")
@@ -265,68 +328,6 @@ divider7 = tk.Label (root,text="_" * 141, font=('Cambria',12))
 divider7.place (y=580)
 
 # MAKING SUBMIT BUTTON
-submit_button = tk.Button (root, text="Submit Entry", font=("Cambria",12)).pack(side=tk.BOTTOM, pady=10)
-
-# DEFINING SUBMIT FUNCTIONS
-def submit(self):
-    # PERSONAL INFORMATION
-    getsurname=respondent_surname.get()
-    getfirstname=respondent_fn.get()
-    getmiddlename=respondent_mn.get()
-    getgender=respondent_gender.get()
-    getage=respondent_age.get()
-    getr_email=respondent_email.get()
-    gethousenum=respondent_housenum.get()
-    getbarangay=respondent_barangay.get()
-    getmunicipality=respondent_municipality.get()
-    getpostal=respondent_postal.get()
-    getprovince=respondent_province.get()
-    getregion=respondent_region.get()
-
-    # VACCINATION INFORMATION
-    getstatus=vacc_stat.get()
-    getcontact=contact.get()
-    gettest_result=test_result.get()
-    getsymptom1=symptoms1.get()
-    getsymptom2=symptoms2.get()
-    getsymptom3=symptoms3.get()
-    getsymptom4=symptoms4.get()
-    getsymptom5=symptoms5.get()
-    getsymptom6=symptoms6.get()
-    getsymptom7=symptoms7.get()
-    getsymptom8=symptoms8.get()
-    getsymptom9=symptoms9.get()
-    getsymptom10=symptoms10.get()
-    getsymptom11=symptoms11.get()
-    getnosymptom=nosymptoms.get()
-
-    # CONTACT INFORMATION
-    getcontact_surname=contact_surname.get()
-    getcontact_fn=contact_fn.get()
-    getcontact_mn=contact_mn.get()
-    getcontact_number=contact_number.get()
-    getcontact_email=contact_email.get()
-    getcontact_rela=contact_rela.get()
-
-    # CSV LABEL
-    csvlabel=["Surname", "First Name", "Middle Name", "Gender", "Age", "E-mail", "Bldg/House No.", "Barangay", "Municipality", "Postal", "Province", "Region", "Vaccination Status", "Probable Contact", "Covid Test Result", "Fever", "Cough", "Colds", "Muscle/Body Pains", "Sore Throat", "Diarrhea", "Headache", "Shortness of Breath", "Difficulty of Breathing", "Loss of Taste", "Loss of Taste", "Loss of Smell", "None", "Contact Surname", "Contact First Name", "Contact Middle Name", "Contact Number", "Contact Email", "Contact Re;atopn"]
-    csvinput=[getsurname, getfirstname, getmiddlename ,getgender, getage, getr_email, gethousenum, getbarangay, getmunicipality, getpostal, getprovince, getregion, getstatus, getcontact, gettest_result, getsymptom1, getsymptom2, getsymptom3, getsymptom4, getsymptom5, getsymptom6, getsymptom7, getsymptom8, getsymptom9, getsymptom10, getsymptom11, getnosymptom, getcontact,getcontact_surname, getcontact_fn,getcontact_mn, getcontact_number, getcontact_email, getcontact_rela]
-
-    check = False
-    try:
-        with open("SubmittedEntries.csv", "r") as csvfile:
-            read = csv.reader(csvfile)
-            if any(read):
-                check = True
-    except FileNotFoundError:
-        pass
-    # write data in csv file
-    with open("SubmittedEntries.csv", "a", newline="") as csvfile:
-        write = csv.writer(ile)
-        if not check:
-            write.writerow(csvlabel)
-        write.writerow(csvinput)
-    messagebox.showinfo("Entries Submitted", "Your entries has been submitted successfully")
-    root.destroy()
+submit_button = tk.Button (root, command=submit, text="Submit Entry", font=("Cambria",12)).pack(side=tk.BOTTOM, pady=10)
 
 root.mainloop()
