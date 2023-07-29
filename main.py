@@ -312,4 +312,21 @@ def submit(self):
     csvlabel=["Surname", "First Name", "Middle Name", "Gender", "Age", "E-mail", "Bldg/House No.", "Barangay", "Municipality", "Postal", "Province", "Region", "Vaccination Status", "Probable Contact", "Covid Test Result", "Fever", "Cough", "Colds", "Muscle/Body Pains", "Sore Throat", "Diarrhea", "Headache", "Shortness of Breath", "Difficulty of Breathing", "Loss of Taste", "Loss of Taste", "Loss of Smell", "None", "Contact Surname", "Contact First Name", "Contact Middle Name", "Contact Number", "Contact Email", "Contact Re;atopn"]
     csvinput=[getsurname, getfirstname, getmiddlename ,getgender, getage, getr_email, gethousenum, getbarangay, getmunicipality, getpostal, getprovince, getregion, getstatus, getcontact, gettest_result, getsymptom1, getsymptom2, getsymptom3, getsymptom4, getsymptom5, getsymptom6, getsymptom7, getsymptom8, getsymptom9, getsymptom10, getsymptom11, getnosymptom, getcontact,getcontact_surname, getcontact_fn,getcontact_mn, getcontact_number, getcontact_email, getcontact_rela]
 
+    check = False
+    try:
+        with open("SubmittedEntries.csv", "r") as csvfile:
+            read = csv.reader(csvfile)
+            if any(read):
+                check = True
+    except FileNotFoundError:
+        pass
+    # write data in csv file
+    with open("SubmittedEntries.csv", "a", newline="") as csvfile:
+        write = csv.writer(ile)
+        if not check:
+            write.writerow(csvlabel)
+        write.writerow(csvinput)
+    messagebox.showinfo("Entries Submitted", "Your entries has been submitted successfully")
+    root.destroy()
+
 root.mainloop()
