@@ -266,7 +266,10 @@ divider7.place (y=580)
 
 # MAKING SUBMIT BUTTON
 submit_button = tk.Button (root, text="Submit Entry", font=("Cambria",12)).pack(side=tk.BOTTOM, pady=10)
+
+# DEFINING SUBMIT FUNCTIONS
 def submit(self):
+    # PERSONAL INFORMATION
     getsurname=respondent_surname.get()
     getfirstname=respondent_fn.get()
     getmiddlename=respondent_mn.get()
@@ -279,6 +282,8 @@ def submit(self):
     getpostal=respondent_postal.get()
     getprovince=respondent_province.get()
     getregion=respondent_region.get()
+
+    # VACCINATION INFORMATION
     getstatus=vacc_stat.get()
     getcontact=contact.get()
     gettest_result=test_result.get()
@@ -294,10 +299,15 @@ def submit(self):
     getsymptom10=symptoms10.get()
     getsymptom11=symptoms11.get()
     getnosymptom=nosymptoms.get()
+
+    # CONTACT INFORMATION
     getcontact_surname=contact_surname.get()
     getcontact_fn=contact_fn.get()
     getcontact_mn=contact_mn.get()
     getcontact_number=contact_number.get()
     getcontact_email=contact_email.get()
     getcontact_rela=contact_rela.get()
+
+
+
 root.mainloop()
